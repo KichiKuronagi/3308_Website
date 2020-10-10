@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+		<nav class="navbar navbar-expand-sm bg-light">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="projects.html">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="form.html">Form</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="signup-modal/login.html">Signup Modal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tic-tac-toe/tic-tac-toe.html">Tic-Tac-Toe</a>
+				</li>
+			</ul>
+			<a href="https://github.com/KichiKuronagi" style="text-align:right"><img src="GitHub-Mark-32px.png" style="float:right"/></a>
+		</nav>
+		
+		
+		<div class="container pt-3">
+			<h1>Baer, Jonathan - <small>Software Dev Methods and Tools</small></h1>
+			<p class="card">Hey, I'm the grandson of the inventor of videogames, I'm conversationally fluent in Japanese, and I'm missing a front tooth, though I doubt you can tell from the picture.<br/> I've been playing with computers since I played space invaders on my dad's old MS-DOS machine at age 5. Since then I've only gotten more into video games, computers, <br/> and both hardware and programming, and figured comp sci would be an interesting job category!</p><br/>
+		
+		
+
+			<h2>My Professional Profile</h2>
+			<img src="me.jpg" class="rounded-circle" width=500 height=336 alt="Jon at Shousenkyo in Yamanashi, Japan"/><br/><br/>
+
+
+			<h3>My Favorite Projects</h3>
+			<table class="card-body">
+				<tr>
+					<th>Project Name</th>
+					<th>Technologies Used</th>
+				</tr>
+				<tr>
+					<td>Palanquin Panic VR</td>
+					<td>Unity, C#, SteamVR, OpenXR, Blender</td>
+				</tr>
+				<tr>
+					<td>LanguageTwo</td>
+					<td>IBM Watson, HTML, CSS, Angular Javascript, Bootstrap, Google Firebase, NodeJS</td>
+				</tr>
+				<tr>
+					<td>Machine Learning for SparkTalk</td>
+					<td>C#, TensorFlow, Keras, Amazon S3, Amazon Lambda</td>
+				</tr>
+			</table><br/>
+
+
+			<h3>My Interests</h3>
+			<div class="row">
+				<div class="col-sm">
+					<div class="card">
+						<img class="card-img-top" src="Controller.jpg" alt="Controller" height=250>
+						<div class="card-body" id="gaming">
+							<h4 class="card-title">Gaming of all sorts!</h4>
+							<p class="card-text">Between my grandfather, videogames, tabletop games, and more, games are a big hobby for me!</p>
+							<button type="button" class="btn btn-primary btn-sm" onclick="addCard('gaming')">show another card</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="card">
+						<img class="card-img-top" src="Yatai.jpg" alt="Japanese parade float" height=250>
+						<div class="card-body"  id="japan">
+							<h4 class="card-title">Japanese language, culture, and history</h4>
+							<p class="card-text">I got into Japanese cartoons as a kid, and now I just enjoy a lot more about the culture in general.</p>
+							<button type="button" class="btn btn-primary btn-sm" onclick="addCard('japan')">show another card</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="card">
+						<img class="card-img-top" src="VR.webp" alt="Virtual Reality" height=250>
+						<div class="card-body"  id="vr">
+							<h4 class="card-title">Virtual Reality</h4>
+							<p class="card-text">Not just for gaming, but as an assistive technology, VR shows incredible potential!</p>
+							<button type="button" class="btn btn-primary btn-sm" onclick="addCard('vr')">show another card</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function addCard(interest)
+			{
+				var id = new Date();
+				
+				var tweet = '<div class="card" id="' + id + '"><img class="img-card-top" src="me.jpg" height=47 width=50><div class="card-body">Added a card!<br/><button type="button" class="btn btn-danger btn-sm" onclick="deleteCard(\'' + id + '\')">show another card</button></div></div>'; 
+				 
+				document.getElementById(interest).innerHTML += tweet;
+			}
+			
+			function deleteCard(id)
+			{
+				document.getElementById(id).remove();
+			}
+		</script>
+		
+      </body>
+    </html>

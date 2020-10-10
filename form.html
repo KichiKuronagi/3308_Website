@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Page Title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script>
+			function setTweetNum(num)
+			{
+				document.getElementById("numTweets").innerHTML=num;
+			}
+		</script>
+      </head>
+      <body>
+		<div class="container pt-3">
+			<form action="./mypage_bootstrap.html">
+				<div class="form-group">
+					<label for="interestName">Interest:</label>
+					<input type="text" class="form-control" id="interestName"/>
+				</div>
+				<div class="form-group">
+					<label for="interestName">Description:</label>
+					<textarea class="form-control" id="interestDesc"></textarea>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-sm-5">
+						<input type="file" class="custom-file-input" id="interestPic">
+						<label class="custom-file-label" for="interestPic">Choose file</label>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="form-group dropdown col-sm-5">
+						<button class="btn btn-primary dropdown-toggle" type="button" id="numTweets" data-toggle="dropdown">Number of Tweets to include</button>
+						<div class="dropdown-menu" arioa-labelledby="numTweets">
+							<a class="dropdown-item" href="#" onclick="setTweetNum(0)">0</a>
+							<a class="dropdown-item" href="#" onclick="setTweetNum(1)">1</a>
+							<a class="dropdown-item" href="#" onclick="setTweetNum(2)">2</a>
+							<a class="dropdown-item" href="#" onclick="setTweetNum(3)">3</a>
+							<a class="dropdown-item" href="#" onclick="setTweetNum(4)">4</a>
+							<a class="dropdown-item" href="#" onclick="setTweetNum(5)">5</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Level of interest on a 1-5 scale:</label><br/>
+					<div class="form-check-inline">
+						<input class="form-check-input" type="radio" id="interestLevel1" value=1>
+						<label class="form-check-label" for="interestLevel1">1</label>
+					</div>
+					<div class="form-check-inline">
+						<input class="form-check-input" type="radio" id="interestLevel2" value=2>
+						<label class="form-check-label" for="interestLevel2">2</label>
+					</div>
+					<div class="form-check-inline">
+						<input class="form-check-input" type="radio" id="interestLevel3" value=3>
+						<label class="form-check-label" for="interestLevel3">3</label>
+					</div>
+					<div class="form-check-inline">
+						<input class="form-check-input" type="radio" id="interestLevel4" value=4>
+						<label class="form-check-label" for="interestLevel4">4</label>
+					</div>
+					<div class="form-check-inline">
+						<input class="form-check-input" type="radio" id="interestLevel5" value=5>
+						<label class="form-check-label" for="interestLevel5">5</label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<input type="text" class="form-control col-sm-5" id="username" placeholder="username"/>
+					<div class="col-sm-2"></div>
+					<input type="password" class="form-control col-sm-5" id="password" placeholder="password"/>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+      </body>
+    </html>

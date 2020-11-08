@@ -31,11 +31,23 @@ function loadImages() {
 			
 			set += card;
 			
-			if (i%4 == 3){
+			if (i%4 == 4){
 				set += '</div>';
 				document.getElementById("pics").innerHTML += set;
 			}
 		}
 		
 	});
+}
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+
+		var position = $(window).scrollTop();
+		var bottom = $(document).height() - $(window).height();
+		
+		if (position == bottom) {
+			loadImages();
+		}
+	}
 }

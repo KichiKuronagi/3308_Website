@@ -1,4 +1,4 @@
-function openModal() {
+function init() {
     /* Note that you do NOT have to do a document.getElementById anywhere in this exercise. Use the elements below */        
     var myInput = document.getElementById("psw");
     var confirmMyInput = document.getElementById("cpsw");
